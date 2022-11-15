@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<title>DATES</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+		body
+		{
+			background-color:salmon;
+		}
+    	table {
+			border: 1px solid black;
+		    border-collapse:collapse;
+		}
+		td,th
+		{
+			border: 1px solid black;
+			text-align:center;
+		}
+		caption 
+		{
+			font-size:20px;
+			font-weight:bold;
+		}
+		code, pre {
+		  font-family: Consolas,"courier new";
+		  color: crimson;
+		  background-color: #f1f1f1;
+		  padding: 1px;
+		}
+		</style>
+
+        <script src="1MSV.js"></script>
+	</head>
+	<body>
+		<h2>Generador de Dates aleatories</h2>
+		<table>
+			<caption>JOCS DE PROVA A SUPERAR</caption>
+			<thead>
+			<tr>
+				<th>Paràmetres d'entrada</th><th>Valor de retorn del mètode</th>
+			</tr>
+			</thead>
+			<tbody>
+				<tr>
+				<td>Cap paràmetre</td><td>01/01/1990</td>
+				</tr>
+				<tr>
+				<td>Cap paràmetre</td><td>31/12/2001</td>
+				</tr>
+				<tr>
+				<td>Un paràmetre: data d'avui</td><td>12/03/2010</td>
+				</tr>
+				<tr>
+				<td>Un paràmetre: data anterior a 01/01/1970</td><td>-1</td>
+				</tr>
+				<tr>
+				<td>Un paràmetre: un string</td><td>-1</td>
+				</tr>
+				<tr>
+				<td>Dos paràmetres: data d'avui, data d'avui sumant 200 dies</td><td>01/01/2022</td>
+				</tr>
+				<tr>
+				<td>Dos paràmetres: data d'avui, data d'avui restant 200 dies</td><td>28/11/2021</td>
+				</tr>
+				<tr>
+				<td>Dos paràmetres: data d'avui, data anterior a 01/01/1970</td><td>-1</td>
+				</tr>
+				<tr>
+				<td>Dos paràmetres: data d'avui, data d'avui</td><td>-1</td>
+				</tr>
+				<tr>
+				<td>Dos paràmetres: data d'avui, un número</td><td>-1</td>
+				</tr>
+				<tr>
+				<td>Tres paràmetres: data d'avui restant 200 dies, data d'avui sumant 200 dies, un número </td><td>25/12/2021</td>
+				</tr>
+			</tbody>
+        </table>
+		<p>Definir un array per desar objectes JSON. En concret els objectes han de tenir l'estructura:
+            <pre id='test'>
+                obj = {
+                    [<b>param1</b>: value,]
+                    [<b>param2</b>: value,]
+                    [<b>param3</b>: value,]
+                    <b>sortida</b>: value
+                        }
+            </pre>
+        Assignar valors als objectes de manera manual, però només als camps param1, param2 i param3 que representaran als possibles paràmetres d'entrada dels jocs de prova indicats en la taula anterior.
+		</p><p>
+			Tot seguit fer un recorregut per l'array dels objectes, invocar el nou mètode i desar el què retorni dins del camp sortida.
+		</p><p>
+			Finalment, mostrar dins l'etiqueta HTML amb id <b>test</b> el valors de cadascun dels objectes, però es vol mostrar un únic objecte cada 2 segons. Quan ja no quedin més objectes a mostrar s'atura el procés.<br>
+			Els objectes de tipus Date s'han de mostrar amb el format <code>dd/mm/yyyy</code>.
+		</p>
+	</body>
+</html>

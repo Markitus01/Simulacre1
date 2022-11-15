@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<title>BINGO</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+		#cartro {
+		  border-collapse:collapse;
+		  border: 1px solid blue;
+		  color: blue;
+		}
+		#cartro td {
+			width:30px;
+			border: 2px solid blue;
+			padding: 10px;
+			height:20px;
+			text-align:center;
+			font-size:20px;
+		}
+		#contenidor {
+			border: 2px solid blue;
+			padding: 5px;
+			width: 400px;
+		}
+		span {
+			color: blue;
+		}
+		table:nth-child(even) {
+			border: 1px solid black;
+		    border-collapse:collapse;
+		}
+		td,th
+		{
+			border: 1px solid black;
+		}
+		
+		</style>
+		<script>
+			document.addEventListener('DOMContentLoaded',function ()
+			{
+				posarEstilsCartro();
+			});
+			function posarEstilsCartro()
+			{
+			// Posar les cel·les buides del cartró amb el fons d'un color blavós
+				let celes = document.getElementById('cartro').getElementsByTagName('TD');
+				
+				for (let i = 0; i<celes.length ; i++)
+				{
+					if (celes[i].textContent.length == 0)
+							celes[i].style.backgroundColor ='PaleTurquoise';
+					else
+							celes[i].style.backgroundColor ='white';
+							
+				}
+			}
+		</script>
+        <script src="2MSV.js"></script>
+	</head>
+	<body>
+		<h1>Bingo Simulator</h1>
+		<div id='contenidor'>
+				<table id='cartro'>
+					<tr>
+						<td></td><td></td><td> 27 </td><td> 36 </td><td></td><td> 52 </td><td> 62 </td><td></td><td> 80 </td>
+					</tr>
+					<tr>
+						<td></td><td> 11 </td><td></td><td> 37 </td><td> 41 </td><td></td><td></td><td> 75 </td><td> 88 </td>
+					</tr>
+					<tr>
+						<td> 3 </td><td> 12 </td><td></td><td></td><td> 48 </td><td></td><td> 65 </td><td> 76 </td><td></td>
+					</tr>
+				</table>
+		</div>
+		<p>A dins d'aquest arxiu HTML hi ha una funció que permet donar color a les cel·les del cartró. Es pot fer servir si cal, però no es pot modificar.</p>
+		<h2>LES CONSTANTS</h2>
+		<p>Cal definir constants pels següents valors, els quals <b>no</b> es poden escriure de manera literal en el codi:
+			<ul>
+				<li>Número de boles: 90</li>
+				<li>Dimensions del cartró: 3 files, 9 columnes</li>
+			</ul>
+		</p>
+		Més informació sobre el joc del Bingo a la <a href='https://ca.wikipedia.org/wiki/Bingo' target='blank'>Wikipedia</a>.
+		<h2>OBSERVACIONS</h2>
+		<ul>
+			<li>Tots els arxius que s'entreguin han de tenir de nom 2_NIF_.....extensió, substituint el NIF pel teu.<br>
+			</li>
+			<li>No es poden modificar els arxius proporcionats, excepte per afegir-hi script's.</li>
+		</ul>
+	</body>
+</html>
