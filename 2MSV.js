@@ -128,10 +128,21 @@ function generarNums()
         //Ordenem els 3 nums de la columna
         columna.sort();
 
-        //Finalment omplim el bingo amb els numeros ordenats a cada columna
+        //Expandim nums[] per a que tingui el numero correcte de files
         for (let i = 0; i < FILES; i++)
         {
-            nums[i][j] = columna[i]; /** ERROR: Cannot set properties of undefined (setting '0') **/
+            nums.push([]);
+        }
+
+        //Finalment omplim el bingo amb els numeros ordenats a cada columna
+        //Expandim totes les files per tenir el numero desitjat de columnes
+        for (let i = 0; i < FILES; i++)
+        {
+            //nums[i][j] = columna[i]; /** ERROR: Cannot set properties of undefined (setting '0') **/
+            for (let k = nums[i].length; k < COLUM; k++)
+            {
+                nums[i].push(columna[k]);
+            }
         }
     }
 
